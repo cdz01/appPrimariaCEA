@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="../css/home.css">
+    <!-- <link rel="stylesheet" href="../css/app.css"> -->
+    <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark fixed-top ">
+        <div class="container-fluid">
+            <a href="./index.html" class="navbar-brand">Boletin Primaria</a>
+            <span>Crear Boletin</span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon" />
+            </button>
+            <div class="offcanvas offcanvas-end bg-dark" tabIndex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                    <button type="button" class="btn-close text-reset bg-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close">
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Alumnos</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Que hacer
+                            </a>
+                            <ul class="dropdown-menu bg-secondary text-white" aria-labelledby="offcanvasNavbarDropdown">
+                                <li><a class="dropdown-item text-white" href="./crearboletin.html">Crear Boletin</a></li>
+                                <li><a class="dropdown-item text-white" href="#">Consultar</a></li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+                                <li><a class="dropdown-item text-white" href="#">Formatos</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex mt-5">
+                        <input type="text" class="form-control me-2" type="search" placeholder="Search"
+                            aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class='container'>
+            <div class='d-flex justify-content-center'>
+                <img src="../../logo.jpg" alt="" width="100" height="100" />
+            </div>
+            <!-- CARDS DE LOS GRADOS -->
+            <div class='row'>
+
+                <div class="col-sm-6 mt-3">
+                    <a href="/" class='link-none'>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title bg-gray p-2">1er Grado</h5>
+                                <p class="card-text">Alumnos: 10</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-sm-6 mt-3">
+                    <a href="/" class='link-none'>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title bg-gray p-2">2do Grado</h5>
+                                <p class="card-text">Alumnos: 10</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-sm-6 mt-3">
+                    <a href="/" class='link-none'>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title bg-gray p-2">3er Grado</h5>
+                                <p class="card-text">Alumnos: 10</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-sm-6 mt-3">
+                    <a href="/" class='link-none'>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title bg-gray p-2">4to Grado</h5>
+                                <p class="card-text">Alumnos: 10</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-sm-6 mt-3">
+                    <a href="/" class='link-none'>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title bg-gray p-2">5to Grado</h5>
+                                <p class="card-text">Alumnos: 10</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-sm-6 mt-3">
+                    <a href="/" class='link-none'>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title bg-gray p-2">6to Grado</h5>
+                                <p class="card-text">Alumnos: 10</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+            </div>
+
+        </section>
+    </main>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

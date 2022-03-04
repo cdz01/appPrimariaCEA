@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Boletin</title>
+
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark fixed-top ">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand">Boletin Primaria</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon" />
+            </button>
+            <div class="offcanvas offcanvas-end bg-dark" tabIndex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                    <button type="button" class="btn-close text-reset bg-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close" />
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Alumnos</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Que hacer
+                            </a>
+                            <ul class="dropdown-menu bg-secondary text-white" aria-labelledby="offcanvasNavbarDropdown">
+                                <li><a class="dropdown-item text-white" href="#">Crear Boletin</a></li>
+                                <li><a class="dropdown-item text-white" href="#">Consultar</a></li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+                                <li><a class="dropdown-item text-white" href="#">Formatos</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex mt-5">
+                        <input type="text" class="form-control me-2" type="search" placeholder="Search"
+                            aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mt-5">
+        <a href="./index.html" class="btn btn-secondary mt-3">
+            <h6>
+                < </h6>
+        </a>
+    </div>
+    <main>
+        <section class='container'>
+            <form class="border rounded p-3 bg-light">
+                <h4>Creacion de boletin</h4>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="floatingNombre" placeholder="Nombre">
+                            <label for="floatingNombre">Nombre del alumno</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="floatingApellido" placeholder="Apellido">
+                            <label for="floatingApellido">Apellido del alumno</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col">
+                        <div class="dropdown">
+                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Calificacion (Cualitativo)
+                            </a>
+
+                            <ul class="dropdown-menu bg-secondary" id="listCalif" aria-labelledby="dropdownMenuLink">
+                                <li><a class="dropdown-item text-white" href="#">A</a></li>
+                                <hr class="dropdown-divider" />
+                                <li><a class="dropdown-item text-white" href="#">B</a></li>
+                                <hr class="dropdown-divider" />
+                                <li><a class="dropdown-item text-white" href="#">C</a></li>
+                                <hr class="dropdown-divider" />
+                                <li><a class="dropdown-item text-white" href="#">D</a></li>
+                                <hr class="dropdown-divider" />
+                                <li><a class="dropdown-item text-white" href="#">E</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <input type="text" class="form-control" id="fieldCalif" disabled placeholder="Calificacion">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-success mt-5" id="btnSubmit">Crear Boletin</button>
+                
+            </form>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/crearBoletin.js"></script>
+</body>
+
+</html>
