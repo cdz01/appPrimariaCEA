@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Boletin Primaria</title>
 
     <link rel="stylesheet" href="../css/home.css">
     <!-- <link rel="stylesheet" href="../css/app.css"> -->
@@ -18,7 +18,7 @@
     <nav class="navbar navbar-dark bg-dark fixed-top ">
         <div class="container-fluid">
             <a href="./index.html" class="navbar-brand">Boletin Primaria</a>
-            <span>Crear Boletin</span>
+            <span id="nav-title">Crear Boletin</span>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                 aria-controls="offcanvasNavbar">
                 <span class="navbar-toggler-icon" />
@@ -44,7 +44,8 @@
                                 Que hacer
                             </a>
                             <ul class="dropdown-menu bg-secondary text-white" aria-labelledby="offcanvasNavbarDropdown">
-                                <li><a class="dropdown-item text-white" href="./crearboletin.html">Crear Boletin</a></li>
+                                <li><a class="dropdown-item text-white" href="./crearboletin.html">Crear Boletin</a>
+                                </li>
                                 <li><a class="dropdown-item text-white" href="#">Consultar</a></li>
                                 <li>
                                     <hr class="dropdown-divider" />
@@ -72,80 +73,118 @@
             <div class='row'>
 
                 <div class="col-sm-6 mt-3">
-                    <a href="/" class='link-none'>
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title bg-gray p-2">1er Grado</h5>
-                                <p class="card-text">Alumnos: 10</p>
-                            </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title bg-gray p-2">1er Grado</h5>
+                            <span class="mr-3"><strong>Secciones:</strong></span>
+                            <button type="button" class="btn btn-lg btn-primary">A</button>
+                            <button type="button" class="btn btn-lg btn-success">B</button>
+
+                            <br>
+                            <span><strong>Alumnos:</strong></span>
+                            <span class="btn" id="1erSecA">#0</span>
+                            <span class="btn" id="1erSecB">#0</span>
+
                         </div>
-                    </a>
+                    </div>
                 </div>
 
                 <div class="col-sm-6 mt-3">
-                    <a href="/" class='link-none'>
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title bg-gray p-2">2do Grado</h5>
-                                <p class="card-text">Alumnos: 10</p>
-                            </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title bg-gray p-2">2do Grado</h5>
+                            <span class="mr-3"><strong>Secciones:</strong></span>
+                            <button type="button" class="btn btn-lg btn-primary">A</button>
+                            <button type="button" class="btn btn-lg btn-success">B</button>
+
+                            <br>
+                            <span><strong>Alumnos:</strong></span>
+                            <span class="btn" id="2doSecA">#0</span>
+                            <span class="btn" id="2doSecB">#0</span>
                         </div>
-                    </a>
+                    </div>
                 </div>
 
                 <div class="col-sm-6 mt-3">
-                    <a href="/" class='link-none'>
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title bg-gray p-2">3er Grado</h5>
-                                <p class="card-text">Alumnos: 10</p>
-                            </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title bg-gray p-2">3er Grado</h5>
+                            <span class="mr-3"><strong>Secciones:</strong></span>
+                            <button type="button" class="btn btn-lg btn-primary">A</button>
+                            <button type="button" class="btn btn-lg btn-success">B</button>
+                            
+                            
+                            <br>
+                            <span><strong>Alumnos:</strong></span>
+                            <span class="btn" id="3erSecA">#0</span>
+                            <span class="btn" id="3erSecB">#0</span>
                         </div>
-                    </a>
+                    </div>
                 </div>
 
                 <div class="col-sm-6 mt-3">
-                    <a href="/" class='link-none'>
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title bg-gray p-2">4to Grado</h5>
-                                <p class="card-text">Alumnos: 10</p>
-                            </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title bg-gray p-2">4to Grado</h5>
+                            <span class="mr-3"><strong>Secciones:</strong></span>
+                            <button type="button" class="btn btn-lg btn-primary">A</button>
+                            <button type="button" class="btn btn-lg btn-success">B</button>
+
+                            
+                            <br>
+                            <span><strong>Alumnos:</strong></span>
+                            <span class="btn" id="4toSecA">#0</span>
+                            <span class="btn" id="4toSecB">#0</span>
                         </div>
-                    </a>
+                    </div>
                 </div>
 
                 <div class="col-sm-6 mt-3">
-                    <a href="/" class='link-none'>
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title bg-gray p-2">5to Grado</h5>
-                                <p class="card-text">Alumnos: 10</p>
-                            </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title bg-gray p-2">5to Grado</h5>
+                            <span class="mr-3"><strong>Secciones:</strong></span>
+                            <button type="button" class="btn btn-lg btn-primary">A</button>
+                            <button type="button" class="btn btn-lg btn-success">B</button>
+
+                            
+                            <br>
+                            <span><strong>Alumnos:</strong></span>
+                            <span class="btn" id="5toSecA">#0</span>
+                            <span class="btn" id="5toSecB">#0</span>
                         </div>
-                    </a>
+                    </div>
                 </div>
 
                 <div class="col-sm-6 mt-3">
-                    <a href="/" class='link-none'>
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title bg-gray p-2">6to Grado</h5>
-                                <p class="card-text">Alumnos: 10</p>
-                            </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title bg-gray p-2">6to Grado</h5>
+                            <span class="mr-3"><strong>Secciones:</strong></span>
+                            <button type="button" class="btn btn-lg btn-primary">A</button>
+                            <button type="button" class="btn btn-lg btn-success">B</button>
+                            <button type="button" class="btn btn-lg btn-warning">C</button>
+
+                            <br>
+                            <span><strong>Alumnos:</strong></span>
+                            <span class="btn" id="6toSecA">#0</span>
+                            <span class="btn" id="6toSecB">#0</span>
+                            <span class="btn" id="6toSecC">#0</span>
                         </div>
-                    </a>
+                    </div>
                 </div>
-                
+
             </div>
 
         </section>
     </main>
 
-
+    <br class="mt-5">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
     <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../vendor/jquery/jquery.js"></script>
+    <script type="module" src="../js/index.js"></script>
 
 </body>
 

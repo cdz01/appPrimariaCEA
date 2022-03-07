@@ -11,6 +11,10 @@ main {
     background-color: gainsboro;
 }
 
+.bg-toast {
+    background-color: rgb(54, 54, 54);
+}
+
 .link-none {
     text-decoration: none;
     color: black;
