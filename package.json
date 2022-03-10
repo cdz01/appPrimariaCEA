@@ -11,6 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "electron": "^17.1.0"
+    "electron": "^17.1.0",
+    "jspdf": "^2.5.1",
+    "jspdf-autotable": "^3.5.23"
   }
 }

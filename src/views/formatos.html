@@ -5,10 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear Boletin</title>
+    <title>Boletin Primaria - Formatos</title>
 
     <link rel="stylesheet" href="../css/home.css">
-    <link rel="stylesheet" href="../css/app.css">
     <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
 
@@ -17,7 +16,7 @@
 <body>
     <nav class="navbar navbar-dark bg-dark fixed-top ">
         <div class="container-fluid">
-            <a href="index.html" class="navbar-brand">Boletin Primaria</a>
+            <a href="index.html" class="navbar-brand">Formatos</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                 aria-controls="offcanvasNavbar">
                 <span class="navbar-toggler-icon" />
@@ -62,69 +61,63 @@
         </div>
     </nav>
 
+    <!-- BOTON DE BACK -->
     <div class="mt-5">
         <a href="./index.html" class="btn btn-secondary mt-3">
             <h6>
-                < 
-            </h6>
+                < </h6>
         </a>
     </div>
     <main>
         <section class='container'>
-            <form class="border rounded p-3 bg-light">
-                <h4>Creacion de boletin</h4>
+            <div class='bg-primary p-1'>
+                <h4>Formatos de las Asignaturas</h4>
+            </div>
+            <form class='border rounded p-5 form'>
                 <div class="row">
-                    <div class="col">
-                        <div class="form-floating">
-                            <input type="text" class="form-control" id="floatingNombre" placeholder="Nombre">
-                            <label for="floatingNombre">Nombre del alumno</label>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="form-floating">
-                            <input type="text" class="form-control" id="floatingApellido" placeholder="Apellido">
-                            <label for="floatingApellido">Apellido del alumno</label>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="row mt-5">
-                    <div class="col">
+                    <div class="col-md-3">
                         <div class="dropdown">
-                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
                                 data-bs-toggle="dropdown" aria-expanded="false">
-                                Calificacion (Cualitativo)
-                            </a>
-
-                            <ul class="dropdown-menu bg-secondary" id="listCalif" aria-labelledby="dropdownMenuLink">
-                                <li><a class="dropdown-item text-white" href="#">A</a></li>
-                                <hr class="dropdown-divider" />
-                                <li><a class="dropdown-item text-white" href="#">B</a></li>
-                                <hr class="dropdown-divider" />
-                                <li><a class="dropdown-item text-white" href="#">C</a></li>
-                                <hr class="dropdown-divider" />
-                                <li><a class="dropdown-item text-white" href="#">D</a></li>
-                                <hr class="dropdown-divider" />
-                                <li><a class="dropdown-item text-white" href="#">E</a></li>
+                                Formatos
+                            </button>
+                            <ul class="dropdown-menu" id="listFormats" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#">Lengua</a></li>
+                                <li><a class="dropdown-item" href="#">Matematicas</a></li>
+                                <li><a class="dropdown-item" href="#">Informatica</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-7">
-                        <input type="text" class="form-control" id="fieldCalif" disabled placeholder="Calificacion">
+
+                    <div class="col bg-success">
+                        <span><strong class="text-white" id="selectedFormat">Selecciona el formato</strong></span>
+                    </div>
+
+                    <div class="mt-3">
+                        <h4 class="text-white">Acciones</h4>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <button class="btn btn-primary">Editar</button>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-danger">Eliminar</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-5">
+                        <label for="" class="text-white">Formato de la materia</label><br>
+                        <textarea class="bg-textarea" id="formatText" cols="112" rows="20" style="height: 100px" disabled></textarea>                    
                     </div>
                 </div>
-
-                <button type="submit" class="btn btn-success mt-5" id="btnSubmit">Crear Boletin</button>
-
             </form>
-
-            
         </section>
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
     <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="../js/crearBoletin.js"></script>
+    <script type="module" src="../js/formatos.js"></script>
 </body>
 
 </html>

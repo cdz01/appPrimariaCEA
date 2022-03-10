@@ -23,3 +23,12 @@ main {
 .link-none:hover {
     color: rgb(211, 24, 24);
 }
+
+.form {
+    background-color: #2b2b2b
+}
+
+.bg-textarea {
+    background-color: #575757;
+    color: #fff
+}

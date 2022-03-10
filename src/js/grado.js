@@ -1,11 +1,13 @@
 import { enumsGrados, enumsSecciones, getGradoOfSeccion, saveEditedBoletin } from "../modules/Storage.js";
 import { enumsSession } from '../modules/Enums.js'
 import { showToast } from "./crearBoletin.js";
+import { getEscala } from "../modules/EscalaEvaluacion.js";
 
 
 const stateGrado = {
     grado: '',
-    seccion: ''
+    seccion: '',
+    fullname: ''
 }
 
 function getDataGrado() {
@@ -18,11 +20,21 @@ function getDataGrado() {
 // INICIALIZAR ESTADOS Y VARIABLES
 getDataGrado();
 
-
 // handlers
 function handleCrearBoletin() {
 
 }
+
+function handlePrinterBoletines () {
+    document.querySelector("#btnPrinterBoletin").addEventListener('click', e => {
+        e.preventDefault();
+        
+        app.testPDF(stateGrado.fullname);
+        console.log("printered")
+    })
+}
+
+handlePrinterBoletines();
 
 export function showTable() {
     $("tbody").children().remove();
@@ -59,21 +71,35 @@ function handleRowClicked(e, alumno) {
         calif: JSON.parse(sessionStorage.getItem("selectedAlumn")).calif,
     }
 
+    stateGrado.fullname = currentAlumno.nombre + " " + currentAlumno.apellido;
+
     document.querySelectorAll("#floatingNombre")[1].value = currentAlumno.nombre;
     document.querySelectorAll("#floatingApellido")[1].value = currentAlumno.apellido;
     document.querySelectorAll("#fieldCalif")[1].value = currentAlumno.calif;
 }
 
+function handleChangeInputPoints () {
+    const viewPts = document.querySelector("#viewPts");
+    const inpPts = document.querySelector('#floatingInput');
+    
+    // EVENTOS DE LISTENER
+    inpPts.addEventListener('change', e => {
+        const valuePts = e.target.value;
+        const califCualiv = getEscala(valuePts);
+        viewPts.innerText = valuePts + ' Pts / ' + califCualiv;
+    })
+
+    inpPts.addEventListener('keyup', e => {
+        const valuePts = e.target.value;
+        const califCualiv = getEscala(valuePts);
+        viewPts.innerText = valuePts + ' Pts / ' + califCualiv;
+    })
+}
+
+handleChangeInputPoints();
 
 //middlewares
-
 function middModalFormEdit() {
-    // CAMPO CALIF
-
-    document.querySelectorAll("#listCalif")[1].addEventListener("click", e => {
-        document.querySelectorAll("#fieldCalif")[1].value = e.target.innerText;
-    });
-
     document.querySelectorAll("#btnSubmit")[1].addEventListener("click", e => {
         e.preventDefault();
 

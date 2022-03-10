@@ -3,6 +3,11 @@ const enumsSession = {
     selectedAlumno: "selectedAlumn"
 }
 
+const enumsFormat = {
+    Lengua: 'formatLengua.txt'
+}
+
 export {
-    enumsSession
+    enumsSession,
+    enumsFormat
 }

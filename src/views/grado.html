@@ -47,7 +47,7 @@
                                 <li>
                                     <hr class="dropdown-divider" />
                                 </li>
-                                <li><a class="dropdown-item text-white" href="#">Formatos</a></li>
+                                <li><a class="dropdown-item text-white" href="./formatos.html">Formatos</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -65,14 +65,21 @@
     <main>
         <section class="container">
 
-            <button class="btn btn-success" data-bs-toggle="collapse" href="#collapseForm"
-                role="button">CrearBoletin</button>
+            <div class="row">
+                <div class="col">
+                    <button class="btn btn-success" data-bs-toggle="collapse" href="#collapseForm" role="button">Crear
+                        Boletin</button>
+                </div>
+                <div class="col">
+                    <button class="btn btn-primary" id="btnPrinterBoletines">imprimir Boletines</button>
+                </div>
+            </div>
 
             <div class="collapse mt-5" id="collapseForm">
                 <div class="card">
                     <div class="card-body">
                         <form class="border rounded p-3 bg-light">
-                            <h4>Creacion de boletin</h4>
+                            <h4>Formulario de Creacion de Boleta</h4>
                             <div class="row">
                                 <div class="col">
                                     <div class="form-floating">
@@ -92,7 +99,7 @@
 
                             <div class="row mt-5">
                                 <div class="col">
-                                    <div class="dropdown">
+                                    <!-- <div class="dropdown">
                                         <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
                                             id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                                             Calificacion (Cualitativo)
@@ -110,12 +117,29 @@
                                             <hr class="dropdown-divider" />
                                             <li><a class="dropdown-item text-white" href="#">E</a></li>
                                         </ul>
+                                    </div> -->
+
+                                    <div class="row">
+                                        
+                                        <div class="col">
+                                            <div class="form-floating mt-3">
+                                                <input type="number" class="form-control" min="0" max="20" id="floatingInput" placeholder="Calfiicacion">
+                                                <label for="floatingInput">Calificacion</label>
+                                            </div>
+
+                                            
+                                        </div>
+                                        <div class="col">
+                                            <h4 class="text-center mt-4" id="viewPts" style="margin-right: 190px">0 Pts</h4>
+                                        </div>
+                                        
                                     </div>
+                                    
                                 </div>
-                                <div class="col-md-7">
+                                <!-- <div class="col-md-7">
                                     <input type="text" class="form-control" id="fieldCalif" disabled
                                         placeholder="Calificacion">
-                                </div>
+                                </div> -->
                             </div>
 
                             <button type="submit" class="btn btn-success mt-5" id="btnSubmit">Crear</button>
@@ -126,7 +150,7 @@
                 </div>
             </div>
 
-            <div class="mt-5 border rounded p-3">
+            <div class="mt-5 mb-5 border rounded p-3">
                 <h5>Boletines</h5>
                 <table class="table table-hover table-striped">
                     <thead>
@@ -174,9 +198,13 @@
                     <h4 class="mt-3">Acciones</h4>
                     <div class="row text-center mt-3">
                         <div class="col">
-                            <button class="btn btn-success" data-bs-toggle="collapse" href="#collapseEdit" role="button">
+                            <button class="btn btn-success" data-bs-toggle="collapse" href="#collapseEdit"
+                                role="button">
                                 Editar
                             </button>
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-primary" id="btnPrinterBoletin">Imprimir boletin</button>
                         </div>
                         <div class="col">
                             <button class="btn btn-danger">
@@ -184,7 +212,7 @@
                             </button>
                         </div>
                     </div>
-                    
+
                     <div class="collapse mt-5" id="collapseEdit">
                         <div class="card">
                             <div class="card-body">
@@ -193,27 +221,31 @@
                                     <div class="row">
                                         <div class="col">
                                             <div class="form-floating">
-                                                <input type="text" class="form-control" id="floatingNombre" placeholder="Nombre">
+                                                <input type="text" class="form-control" id="floatingNombre"
+                                                    placeholder="Nombre">
                                                 <label for="floatingNombre">Nombre del alumno</label>
                                             </div>
                                         </div>
                                         <div class="col">
                                             <div class="form-floating">
-                                                <input type="text" class="form-control" id="floatingApellido" placeholder="Apellido">
+                                                <input type="text" class="form-control" id="floatingApellido"
+                                                    placeholder="Apellido">
                                                 <label for="floatingApellido">Apellido del alumno</label>
                                             </div>
                                         </div>
                                     </div>
-                    
+
                                     <div class="row mt-5">
                                         <div class="col">
                                             <div class="dropdown">
-                                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
+                                                    id="dropdownMenuLink" data-bs-toggle="dropdown"
+                                                    aria-expanded="false">
                                                     Calificacion (Cualitativo)
                                                 </a>
-                    
-                                                <ul class="dropdown-menu bg-secondary" id="listCalif" aria-labelledby="dropdownMenuLink">
+
+                                                <ul class="dropdown-menu bg-secondary" id="listCalif"
+                                                    aria-labelledby="dropdownMenuLink">
                                                     <li><a class="dropdown-item text-white" href="#">A</a></li>
                                                     <hr class="dropdown-divider" />
                                                     <li><a class="dropdown-item text-white" href="#">B</a></li>
@@ -227,14 +259,16 @@
                                             </div>
                                         </div>
                                         <div class="col-md-7">
-                                            <input type="text" class="form-control" id="fieldCalif" disabled placeholder="Calificacion">
+                                            <input type="text" class="form-control" id="fieldCalif" disabled
+                                                placeholder="Calificacion">
                                         </div>
                                     </div>
-                    
-                                    <button type="submit" class="btn btn-success mt-5" id="btnSubmit">Editar Alumno</button>
-                    
+
+                                    <button type="submit" class="btn btn-success mt-5" id="btnSubmit">Editar
+                                        Alumno</button>
+
                                 </form>
-                    
+
                             </div>
                         </div>
                     </div>
@@ -242,7 +276,8 @@
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" id="btnCloseModalEdit" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-secondary" id="btnCloseModalEdit"
+                        data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
